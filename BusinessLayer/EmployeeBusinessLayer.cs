@@ -28,7 +28,7 @@ namespace Test.Models
 
         public UserStatus GetUserValidity(UserDetails user)
         {
-            if (user.UserNamefgh == "Admin" && user.Password == "Admin")
+            if (user.UserName == "Admin" && user.Password == "Admin")
             {
                 return UserStatus.AuthenticatedAdmin;
             }
@@ -44,7 +44,7 @@ namespace Test.Models
 
         public void UploadEmployees(List<Employee> employees)
         {
-            SalesERPDAL salesDal = new SalesERPDAL();
+            SalesERPDAL salesDal = new SalesERPDALpol();
             salesDal.Employees.AddRange(employees);
             salesDal.SaveChanges();
         }
