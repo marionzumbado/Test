@@ -28,7 +28,7 @@ namespace Test.Models
 
         public UserStatus GetUserValidity(UserDetails user)
         {
-            if (user.UserName == "Admin" && user.Password == "Admin")
+            if (user.UserNamefgh == "Admin" && user.Password == "Admin")
             {
                 return UserStatus.AuthenticatedAdmin;
             }
