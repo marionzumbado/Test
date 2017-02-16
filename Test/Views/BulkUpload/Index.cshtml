@@ -1,0 +1,16 @@
+﻿@using Test.ViewModels
+@model FileUploadViewModel
+
+@section TitleSection{
+    File Upload    
+}
+
+@section ContentBody{
+    <div>
+        <a href="/Employee/Index">Back</a>
+        <form action="/BulkUpload/Upload" method="post" enctype="multipart/form-data">
+            Select File : <input type="file" name="fileUpload" value="" />
+            <input type="submit" name="name" value="Upload" />
+        </form>
+    </div>
+}

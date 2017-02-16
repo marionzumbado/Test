@@ -1,0 +1,52 @@
+﻿@model Test.ViewModels.LoginViewModel
+@using Test.Extensions
+
+@{
+
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    @Scripts.Render("~/bundles/jqueryValidation")
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Login</title>
+
+</head>
+
+<body>
+        @Html.ValidationMessage("CredentialError", new { style = "color:red;" })
+        @using (Html.BeginForm("DoLogin", "Authentication", FormMethod.Post))
+
+        {
+
+            @Html.LabelFor(c => c.UserName)
+
+            @Html.TextBoxFor(x => x.UserName)
+            @Html.ValidationMessageFor(x => x.UserName)
+
+
+
+            <br />
+
+            @Html.LabelFor(c => c.Password)
+
+            @Html.PasswordFor(x => x.Password)
+
+            <br />
+
+
+            @Html.Submit("Login")
+
+        }
+
+</body>
+
+</html>
+
