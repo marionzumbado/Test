@@ -44,7 +44,7 @@ namespace Test.Models
 
         public void UploadEmployees(List<Employee> employees)
         {
-            SalesERPDAL salesDal = new SalesERPDALpol();
+            SalesERPDAL salesDal = new SalesERPDAL();
             salesDal.Employees.AddRange(employees);
             salesDal.SaveChanges();
         }
