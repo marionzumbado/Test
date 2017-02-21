@@ -16,7 +16,7 @@ namespace Test.MyClassLib
         {
             var ebl = new EmployeeBusinessLayer();
             var ud = new UserDetails();
-            ud.UserName = "Admin1";
+            ud.UserName = "Admin";
             ud.Password = "Admin";
             var result = ebl.GetUserValidity(ud);
             Assert.AreEqual(result, UserStatus.AuthenticatedAdmin);
