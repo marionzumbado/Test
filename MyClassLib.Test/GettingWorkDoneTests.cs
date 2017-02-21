@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Test.Models;
-
+//adding a simple comment 2
 namespace Test.MyClassLib
 {
     [TestFixture]
@@ -16,7 +16,7 @@ namespace Test.MyClassLib
         {
             var ebl = new EmployeeBusinessLayer();
             var ud = new UserDetails();
-            ud.UserName = "Admin";
+            ud.UserName = "Admin1";
             ud.Password = "Admin";
             var result = ebl.GetUserValidity(ud);
             Assert.AreEqual(result, UserStatus.AuthenticatedAdmin);
